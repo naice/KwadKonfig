@@ -1,0 +1,112 @@
+Entering CLI Mode, type 'exit' to return, or 'help'
+
+# 
+# Building AutoComplete Cache ... Done!
+# 
+# diff all
+
+# version
+# Betaflight / STM32F405 (S405) 4.1.7 May 28 2020 / 15:05:17 (9ba02a587) MSP API: 1.42
+# manufacturer_id: DIAT   board_name: MAMBAF405US   custom defaults: YES
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name MAMBAF405US
+manufacturer_id DIAT
+mcu_id 002a0043434e501520373059
+signature 
+
+# feature
+feature GPS
+
+# beacon
+beacon RX_LOST
+
+# map
+map TAER1234
+
+# serial
+serial 0 0 115200 57600 0 115200
+serial 1 1 115200 57600 0 115200
+serial 3 64 19200 57600 0 115200
+serial 4 2 115200 57600 0 115200
+
+# aux
+aux 0 0 0 1800 2100 0 0
+aux 1 35 1 1800 2100 0 0
+
+# rxfail
+rxfail 7 s 1000
+
+# master
+set gyro_sync_denom = 2
+set gyro_lowpass2_hz = 325
+set gyro_notch1_hz = 400
+set gyro_notch2_hz = 200
+set dyn_lpf_gyro_min_hz = 260
+set dyn_lpf_gyro_max_hz = 650
+set acc_calibration = 55,1,-21
+set rssi_channel = 8
+set serialrx_provider = CRSF
+set dshot_bidir = ON
+set failsafe_switch_mode = STAGE2
+set ibata_scale = 115
+set small_angle = 180
+set gps_provider = UBLOX
+set gps_sbas_mode = EGNOS
+set gps_auto_baud = ON
+set gps_ublox_use_galileo = ON
+set gps_rescue_initial_alt = 90
+set gps_rescue_sanity_checks = RESCUE_SANITY_FS_ONLY
+set gps_rescue_min_sats = 5
+set gps_rescue_allow_arming_without_fix = ON
+set pid_process_denom = 2
+set osd_rssi_pos = 14465
+set osd_link_quality_pos = 88
+set osd_rssi_dbm_pos = 120
+set osd_current_pos = 14369
+set osd_gps_lon_pos = 14784
+set osd_gps_lat_pos = 14752
+set osd_gps_sats_pos = 14433
+set osd_avg_cell_voltage_pos = 14401
+set debug_mode = GYRO_SCALED
+
+profile 0
+
+# profile 0
+set dyn_lpf_dterm_min_hz = 91
+set dyn_lpf_dterm_max_hz = 221
+set dterm_lowpass_hz = 0
+set dterm_lowpass2_hz = 195
+
+profile 1
+
+profile 2
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+# rateprofile 0
+set tpa_mode = PD
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+rateprofile 4
+
+rateprofile 5
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save

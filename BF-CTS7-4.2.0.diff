@@ -1,0 +1,109 @@
+# 
+# Building AutoComplete Cache ... Done!
+# 
+# diff all
+
+# version
+# Betaflight / STM32F405 (S405) 4.2.0 Jun 14 2020 / 03:04:22 (8f2d21460) MSP API: 1.43
+# config: manufacturer_id: DIAT, board_name: MAMBAF405US, version: cdb02aa1, date: 2020-05-24T03:18:53Z
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name MAMBAF405US
+manufacturer_id DIAT
+mcu_id 002a0043434e501520373059
+signature 
+
+# feature
+feature GPS
+
+# beacon
+beacon RX_LOST
+beacon RX_SET
+
+# map
+map TAER1234
+
+# serial
+serial 0 0 115200 57600 0 115200
+serial 1 1 115200 57600 0 115200
+serial 3 64 19200 57600 0 115200
+serial 4 2 115200 9600 0 115200
+
+# aux
+aux 0 0 0 1800 2100 0 0
+aux 1 13 1 1300 2100 0 0
+aux 2 35 1 1800 2100 0 0
+
+# master
+set gyro_lowpass2_hz = 275
+set dyn_lpf_gyro_min_hz = 220
+set dyn_lpf_gyro_max_hz = 550
+set acc_calibration = -55,49,28,1
+set rssi_channel = 8
+set serialrx_provider = CRSF
+set dshot_bidir = ON
+set failsafe_switch_mode = STAGE2
+set beeper_dshot_beacon_tone = 5
+set small_angle = 180
+set gps_provider = UBLOX
+set gps_sbas_mode = EGNOS
+set gps_auto_baud = ON
+set osd_rssi_pos = 14465
+set osd_link_quality_pos = 88
+set osd_rssi_dbm_pos = 120
+set osd_current_pos = 14369
+set osd_gps_lon_pos = 14784
+set osd_gps_lat_pos = 14752
+set osd_gps_sats_pos = 14433
+set osd_avg_cell_voltage_pos = 14401
+set debug_mode = GYRO_SCALED
+
+profile 0
+
+# profile 0
+set dyn_lpf_dterm_min_hz = 77
+set dyn_lpf_dterm_max_hz = 187
+set dterm_lowpass2_hz = 165
+set p_pitch = 55
+set i_pitch = 108
+set d_pitch = 46
+set f_pitch = 114
+set p_roll = 50
+set i_roll = 102
+set d_roll = 42
+set f_roll = 108
+set p_yaw = 54
+set i_yaw = 108
+set f_yaw = 108
+set d_min_roll = 28
+set d_min_pitch = 30
+
+profile 1
+
+profile 2
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+rateprofile 4
+
+rateprofile 5
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
